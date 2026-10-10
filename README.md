@@ -56,20 +56,6 @@ The game interacts directly with the operating system kernel via software except
 
 An automation script is provided in the `scripts/` directory to handle the multi-file assembly pipeline, resolve linkage symbols across modules, and launch the game seamlessly.
 
-To build and run the executable in a single step, execute the script from the root of the project:
-
-```bash
-# Clone the repository
-git clone https://github.com
-cd arm64-wordle
-
-# Make the script executable (if required)
-chmod +x scripts/run.sh
-
-# Run the unified build and launch pipeline
-./scripts/run.sh
-```
-
 ## Gameplay
 
 The UI parses match states directly into distinct character tokens to deliver an instant visual report in the terminal:
