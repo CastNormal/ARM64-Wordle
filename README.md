@@ -54,21 +54,21 @@ The game interacts directly with the operating system kernel via software except
 
 ### Compilation & Execution
 
-You can compile the game modules, resolve external linkage symbols, and execute the final native binary directly via `clang`:
+An automation script is provided in the `scripts/` directory to handle the multi-file assembly pipeline, resolve linkage symbols across modules, and launch the game seamlessly.
+
+To build and run the executable in a single step, execute the script from the root of the project:
 
 ```bash
 # Clone the repository
 git clone https://github.com
 cd arm64-wordle
 
-# Assemble and link the engine split-modules
-clang -o wordle src/asm/wordle.s src/asm/utils.s -e main -arch arm64
+# Make the script executable (if required)
+chmod +x scripts/run.sh
 
-# Start the game
-./wordle
+# Run the unified build and launch pipeline
+./scripts/run.sh
 ```
-
----
 
 ## 📸 Gameplay & Visuals
 
