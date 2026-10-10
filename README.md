@@ -70,7 +70,7 @@ chmod +x scripts/run.sh
 ./scripts/run.sh
 ```
 
-## 📸 Gameplay & Visuals
+## Gameplay
 
 The UI parses match states directly into distinct character tokens to deliver an instant visual report in the terminal:
 
