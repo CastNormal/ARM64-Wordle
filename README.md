@@ -1,8 +1,8 @@
-# 🎮 ARM64 Wordle
+# ARM64 Wordle
 
 A bare-metal **ARM64 Assembly language** clone of the popular Wordle game, built completely from scratch. This project showcases low-level system design, hardware register optimization, data compression engineering, and algorithmic mapping without relying on high-level runtime libraries.
 
-## 🚀 Key Engineering Highlights
+## Key Engineering Highlights
 * **High-Level to Low-Level Optimization:** Initially prototyped in **C** to map out logical features and structural flows before being completely rewritten in **ARM64 assembly**.
 * **Custom Bit-Packed Word Compression:** Designed an asset utility in C that compresses a standard dictionary file into sequential **32-bit integer arrays**, significantly shrinking the game's storage footprint.
 * **Low-Level Data Mechanics:** Implemented a binary search algorithm entirely in assembly using bitwise shifts (`lsl`) to validate player guesses against **14,850+ words** in sub-millisecond lookups.
@@ -10,7 +10,7 @@ A bare-metal **ARM64 Assembly language** clone of the popular Wordle game, built
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 The codebase is structured to enforce a strict **Separation of Concerns**, cleanly isolating core engine loops from utilities and asset engines:
 
@@ -28,7 +28,7 @@ arm64-wordle/
 
 ---
 
-## 🛠️ Technical Implementation Details
+## Technical Implementation Details
 
 ### 1. Data Compression Strategy
 Instead of storing words as raw 5-byte ASCII strings (`14,855 words * 5 bytes = ~74KB`), the custom asset compilation tool maps lowercase alphabet letters (`a-z`) down to a tight **5-bit numeric value** (2⁵ = 32 total possibilities). 5 letters × 5 bits fits perfectly into a single **32-bit integer boundary**, maximizing standard CPU L1-cache efficiency during game runtime.
@@ -46,7 +46,7 @@ The game interacts directly with the operating system kernel via software except
 
 ---
 
-## 🚦 Getting Started (macOS Apple Silicon)
+## Accessing (macOS Apple Silicon)
 
 ### Prerequisites
 * A Mac running an Apple Silicon M-Series chip
