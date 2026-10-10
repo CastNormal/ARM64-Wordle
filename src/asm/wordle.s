@@ -327,7 +327,7 @@ skip_if:
     cmp x6, #0
     b.eq not_green
 
-    mov w1, #35 //green
+    mov w1, #35 //ACSII code for '#' (green)
     b exit_con
 
 not_green:
@@ -337,11 +337,11 @@ not_green:
     cmp x6, #0
     b.eq not_yellow
 
-    mov w1, #63 //yellow
+    mov w1, #63 //ASCII code for: '?' (yellow)
     b exit_con
 
 not_yellow:
-    mov w1, #88 //red
+    mov w1, #88 //ASCII code for: 'X' (grey)
 
 exit_con:
 
