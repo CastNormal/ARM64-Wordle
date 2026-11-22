@@ -79,8 +79,6 @@ int main() {
     r1 = words[wi];
     char mystery_word[6];
     unwrap_word(mystery_word, r1);
-    
-    printf("%ld\n", wrap_word("abcde"));
 
     //string for guesses
 
