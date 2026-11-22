@@ -56,6 +56,8 @@ The game interacts directly with the operating system kernel via software except
 
 An automation script is provided in the `scripts/` directory to handle the multi-file assembly pipeline, resolve linkage symbols across modules, and launch the game seamlessly.
 
+Open the folder from the source directory and run `sh scripts/run_asm.sh`.
+
 ## Gameplay
 
 The UI parses match states directly into distinct character tokens to deliver an instant visual report in the terminal:
